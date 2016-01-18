@@ -1,22 +1,52 @@
-var LED = require('led-me-know');
+var lmk = require('led-me-know');
 
+/**
+ * Retrieves the LED matrix instance
+ * from led-me-know library. Saves this
+ * on the context.
+ */
 var LedMeKnowReporter = function(baseReporterDecorator) {
 
     var _this = this;
-    baseReporterDecorator(_this);
+
+    lmk
+        .getPixelAsync()
+        .then(function(pixel) {
+            _this.pixel = pixel;
+        });
 };
 
-LedMeKnowReporter.prototype.onBrowserComplete = function(a, b) {
-    console.log('onBrowserComplete', a, b);
+/**
+ * Karma API fn which is triggered
+ * when Karma starts running specs
+ */
+LedMeKnowReporter.prototype.onRunStart = function() {
+
+    if (!this.pixel) {
+        console.log('No LED matrix or board found');
+        return;
+    }
+
+    lmk.loading(this.pixel);
 };
 
-LedMeKnowReporter.prototype.onRunComplete = function(a, b) {
-    console.log('onRunComplete', a, b);
-};
+/**
+ * Karma API fn which is triggered
+ * when Karma has finished running specs
+ */
+LedMeKnowReporter.prototype.onRunComplete = function(results) {
 
-LedMeKnowReporter.prototype.onRunStart = function(a, b) {
-    console.log('onRunStart', a, b);
-}
+    if (!this.pixel) {
+        console.log('No LED matrix or board found');
+        return;
+    }
+
+    if (results.getResults().failed > 0) {
+        lmk.failed(this.pixel);
+    } else {
+        lmk.success(this.pixel);
+    }
+};
 
 LedMeKnowReporter.$inject = ['baseReporterDecorator', 'formatError'];
 
