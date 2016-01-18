@@ -1,0 +1,29 @@
+{
+  "name": "led-me-know-karma",
+  "version": "0.0.0",
+  "description": "LED me know Karma reporter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "karma-plugin", "karma-reporter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnycopperstone/led-me-know-karma"
+  },
+  "author": "Johnny Copperstone <jonnce@gmail.com> (http://blog.johnnycopperstone.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnnycopperstone/led-me-know-karma/issues"
+  },
+  "homepage": "https://github.com/johnnycopperstone/led-me-know-karma",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "johnny-five": "^0.9.14",
+    "node-pixel": "^0.4.1",
+    "lodash": "^3.10.1",
+    "led-me-know": "https://github.com/johnnycopperstone/led-me-know.git"
+  }
+}
