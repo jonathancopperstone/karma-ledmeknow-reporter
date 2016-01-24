@@ -1,6 +1,6 @@
 {
   "name": "karma-ledmeknow-reporter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "LED Me Know custom Karma reporter.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/johnnycopperstone/karma-ledmeknow-reporter",
   "dependencies": {
-    "led-me-know": "https://github.com/johnnycopperstone/led-me-know.git"
+    "led-me-know": "^0.1.0"
   }
 }
