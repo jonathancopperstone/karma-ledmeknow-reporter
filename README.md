@@ -1,5 +1,7 @@
 # LED Me Know Reporter: Karma
 
+[![npm version](https://badge.fury.io/js/karma-ledmeknow-reporter.svg)](https://badge.fury.io/js/karma-ledmeknow-reporter)
+
 This is a custom karma reporter, using [`led-me-know`](https://github.com/johnnycopperstone/led-me-know) to report the results from the specs via an LED matrix.
 
 For more information you can check out the docs in the [`led-me-know`](https://github.com/johnnycopperstone/led-me-know) library or see the [blog post](http://blog.johnnycopperstone.me/led-me-know).
