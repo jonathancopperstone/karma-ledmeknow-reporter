@@ -22,11 +22,7 @@
     "url": "https://github.com/johnnycopperstone/karma-ledmeknow-reporter/issues"
   },
   "homepage": "https://github.com/johnnycopperstone/karma-ledmeknow-reporter",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "johnny-five": "^0.9.14",
-    "node-pixel": "^0.4.1",
-    "lodash": "^3.10.1",
+  "dependencies": {
     "led-me-know": "https://github.com/johnnycopperstone/led-me-know.git"
   }
 }
