@@ -10,9 +10,9 @@ var LedMeKnowReporter = function(baseReporterDecorator) {
     var _this = this;
 
     lmk
-        .getPixelAsync()
-        .then(function(pixel) {
-            _this.pixel = pixel;
+        .getStripAsync()
+        .then(function(strip) {
+            _this.strip = strip;
         });
 };
 
@@ -22,12 +22,12 @@ var LedMeKnowReporter = function(baseReporterDecorator) {
  */
 LedMeKnowReporter.prototype.onRunStart = function() {
 
-    if (!this.pixel) {
+    if (!this.strip) {
         console.log('No LED matrix or board found');
         return;
     }
 
-    lmk.loading(this.pixel);
+    lmk.setStripToLoading(this.strip);
 };
 
 /**
@@ -36,15 +36,15 @@ LedMeKnowReporter.prototype.onRunStart = function() {
  */
 LedMeKnowReporter.prototype.onRunComplete = function(results) {
 
-    if (!this.pixel) {
+    if (!this.strip) {
         console.log('No LED matrix or board found');
         return;
     }
 
     if (results.getResults().failed > 0) {
-        lmk.failed(this.pixel);
+        lmk.setStripToFailed(this.strip);
     } else {
-        lmk.success(this.pixel);
+        lmk.setStripToSuccessful(this.strip);
     }
 };
 
