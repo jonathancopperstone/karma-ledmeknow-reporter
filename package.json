@@ -1,6 +1,6 @@
 {
   "name": "karma-ledmeknow-reporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LED Me Know custom Karma reporter.",
   "main": "index.js",
   "scripts": {
