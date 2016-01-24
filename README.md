@@ -12,8 +12,6 @@ To use this reporter, you need to install this npm as a dev dependency.
 
 Next, in your karma configuration object, simply add the name of this reporter, _led-me-know_, to the `reporters` property.
 
-    // In your karma config
-
     config.set({
         reporters: ['progress', 'led-me-know']
     });
