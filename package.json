@@ -1,12 +1,14 @@
 {
   "name": "karma-ledmeknow-reporter",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "LED Me Know custom Karma reporter.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "led",
+    "led-me-know",
     "karma-plugin",
     "karma-reporter"
   ],
